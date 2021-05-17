@@ -14,4 +14,4 @@ while x == 1:
     print(value_1, "的阶乘是", answer)
     option = int(input('如果你要继续调试程序键入‘1’，任意键退出程序！\n'))
     if option != 1:
-        x = 0  
+        x = 0
