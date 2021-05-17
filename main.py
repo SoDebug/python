@@ -5,8 +5,6 @@ def my_fact(value_1):
         return 1
     else:
         return value_1 * my_fact(value_1 - 1)
-
-
 pass
 pass
 x = 1
