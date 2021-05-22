@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#-*- coding:utf-8 -*-
+#-*- coding:utf-8 -*-   
 print('这是一个用来完成基本运算的测试程序\n')
 print("键入1是加法，键入2是减法，键入3是乘法，键入4是除法\n")
 option=int(input('你现在可以选择运算模式了\n'))
