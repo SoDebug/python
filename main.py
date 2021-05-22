@@ -1,17 +1,20 @@
+##切片相关代码
 #!/usr/bin/env python
-# -*- coding:utf-8 -*-
-def my_fact(value_1):
-    if value_1 == 1:
-        return 1
-    else:
-        return value_1 * my_fact(value_1 - 1)
-pass
-pass
-x = 1
-while x == 1:
-    value_1 = int(input("你可以输入你需要计算阶乘的value!\n"))
-    answer = my_fact(value_1)
-    print(value_1, "的阶乘是", answer)
-    option = int(input('如果你要继续调试程序键入‘1’，任意键退出程序！\n'))
-    if option != 1:
-        x = 0
+#-* coding:utf-8 -*
+print("本程序用于去除字符串首尾的空格\n")
+s=input("现在输入你想要进行操作的字符串\n")
+n=1
+while (s[n-1:n]==' '):
+    s=s[n:]
+
+print("去除首空格后")
+print(s)
+print("\n")
+n=-1
+while (n!=0):
+    if(s[n]==' '):
+        s=s[0:n]
+    elif (s[n]!=' '):
+        break
+print('去除尾空格后\n')
+print(s)
