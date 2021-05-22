@@ -1,17 +1,27 @@
 #!/usr/bin/env python
-# -*- coding:utf-8 -*-
-def my_fact(value_1):
-    if value_1 == 1:
-        return 1
+#-*- coding:utf-8 -*-
+def abs_pro(x):
+    if x>=0:
+        print("正数的绝对值为其本身！\n")
+        pre_value=x
+        new_value=x
+        return pre_value,new_value
     else:
-        return value_1 * my_fact(value_1 - 1)
-pass
-pass
-x = 1
-while x == 1:
-    value_1 = int(input("你可以输入你需要计算阶乘的value!\n"))
-    answer = my_fact(value_1)
-    print(value_1, "的阶乘是", answer)
-    option = int(input('如果你要继续调试程序键入‘1’，任意键退出程序！\n'))
-    if option != 1:
-        x = 0
+        print("负数的绝对值是它的相反数！\n")
+        pre_value=x
+        new_value=-x
+        return pre_value,new_value
+print("本程序是进阶版的绝对值求解函数，将会在函数返回值中返回两个函数！\n")
+n=0
+while n==0:
+    value=int(input("请键入你需要测试的值，按下‘Enter'键完成输入\n"))
+    value_1,value_2=abs_pro(value)
+    print(value_1,"的绝对值为",value_2)
+    option=int(input("你所测试已经完成，继续测试输入0，退出测试输入1\n"))
+    if option==1:
+        n=1
+    elif option==0:
+        n=0
+    else:
+        print("接收到了一个非正常的输入?请按照程序描述输入!\n")
+
