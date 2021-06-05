@@ -1,31 +1,33 @@
 #!usr/bin/env python
 #-*- coding:utf-8 -*-
-class student(object):
-    def __init__ (self,name,id,score):
+class people(object):
+    def __init__(self,name,sex,id):
         self.__name=name
+        self.__sex=sex
         self.__id=id
-        self.__score=score
-    def print_message(self):
-        print("%s的身份id为%s\n成绩为%s"%(self.__name,self.__id,self.__score))
-    def set_score(self,score):
-        self.__score=score
-    def print_grade(self):
-        if self.__score>=60 and self.__score<80:
-            return 'C'
-        elif self.__score>=90:
-            return 'A'
-        elif self.__score>=80 and self.__score<90:
-            return 'B'
-        else:
-            return 'D'
-张三=student('张三',1,88)
-李四=student('李四',2,98)
-张三.print_message()
-print('获得评价',张三.print_grade())
-李四.print_message()
-print('获得评价',李四.print_grade())
-张三.set_score(100)
-张三.print_message()
-print('获得评价',张三.print_grade())
-李四.set_score(60)
-李四.print_message()  
+    def check(self):
+        print('%s的性别是%s,id是%s'%(self.__name,self.__sex,self.__id))
+    def loading(self):
+        print("正在加载中，请稍等...\n")
+class student(people):
+    def __init__(self,grade,classes):
+        self.__grade=grade
+        self.__classes=classes
+    def check_student(self):
+        print("成绩为%s,班级为%s"%(self.__grade,self.__classes))
+class teacher(people):
+    def __init__(self,classes):
+        self.__classes=classes
+    def check_teacher(self):
+        print("班级为%s"%(self.__classes))
+#类与方法编写完毕，方法完成继承
+#开始创造对象
+张三=people("张三","XY",20210601)
+张三.check()
+张三=student(98,1)
+张三.check_student()
+李红老师=people("李红老师","XX",202114)
+李红老师.check()
+李红老师=teacher(1)
+李红老师.check_teacher
+#继承的是方法
